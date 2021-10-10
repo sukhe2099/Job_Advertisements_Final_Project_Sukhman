@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Job_Advertisements_Final_Project_Sukhman.Models.Application>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Job Applicatins List</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Applicant)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Advertisement)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Applicant.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Advertisement.Title)
+            </td>
+            <td>
+               
+                <a class="btn btn-primary btn-xl" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a class="btn btn-primary btn-xl" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

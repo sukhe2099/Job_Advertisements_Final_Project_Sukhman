@@ -1,0 +1,16 @@
+﻿@model Job_Advertisements_Final_Project_Sukhman.Models.Application
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Application</h4>
+<hr />
+<h2>@Model.Applicant.Name You have applied for @Model.Advertisement.Title</h2>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

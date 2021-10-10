@@ -1,0 +1,26 @@
+﻿@model Job_Advertisements_Final_Project_Sukhman.Models.Advertisement
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Advertisement</h4>
+    <hr />
+    
+    
+        <h3> @Html.DisplayFor(model => model.Title) </h3>
+        <p>
+            @Html.DisplayFor(model => model.Content)
+        </p>
+        
+        <h5>By @Html.DisplayNameFor(model => model.AdvertiserEmail) </h5>
+       
+
+</div>
+<div>
+    <a  class="btn btn-primary btn-xl" href="/Applications/Create/@Model.Id">Apply</a> |
+   
+</div>
